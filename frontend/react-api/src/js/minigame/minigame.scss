@@ -1,0 +1,81 @@
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bree+Serif|Cabin|Fredoka+One|Montserrat|Roboto|Roboto+Condensed|Roboto+Slab|Ubuntu&display=swap);
+
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.minigame{
+    grid-row: 1 / span 20;
+    grid-column: 1 / span 20;
+    background-color: #271E52;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    &__counter{
+        font-size: 1.5rem;
+        font-family: monospace;
+        color: white;
+        text-shadow: 0.009rem 0.009rem 0.0224rem white;
+        font-weight: bold;
+        animation: show 1s linear;
+    }
+    &__wrapper{
+        flex-basis: 65%;
+        width: 35%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        animation: show 1s linear;
+        &--clickable{
+            flex-basis: 50%;
+            width: 75%;
+            background-image: url(../../img/mubsy.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 75%;
+            transition: all .2s linear;
+            cursor: pointer;
+            &:active{
+                transform: scale(.9);
+            }
+        }
+        &--reset{
+            flex-basis: 10%;
+            width: 35%;
+            border: none;
+            background-color: #161927;
+            font-size: 1.5rem;
+            font-family: 'Ubuntu', sans-serif;
+            color: white;
+            text-shadow: 0.009rem 0.009rem 0.0224rem white;
+            border-radius: .25rem;
+            transition: all .2s linear;
+            font-weight: bold;
+            &:hover{
+                transform: scale(1.05);
+                cursor: pointer;
+            }
+        }
+        &--home{
+            font-size: 1.5rem;
+            font-family: monospace;
+            color: white;
+            text-shadow: 0.009rem 0.009rem 0.0224rem white;
+            font-weight: bold;
+            transition: all .2s linear;
+            text-decoration: none;
+            &:hover{
+                color: #C0C09A;
+                text-shadow: 0.009rem 0.009rem 0.0224rem #C0C09A;
+                cursor: pointer;
+            }
+        }
+    }
+}

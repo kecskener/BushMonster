@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bree+Serif|Cabin|Fredoka+One|Montserrat|Roboto|Roboto+Condensed|Roboto+Slab|Ubuntu&display=swap);
+
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.authed{
+    grid-row: 1 / span 20;
+    grid-column: 1 / span 20;
+    background-color: #271E52;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &--panel{
+        flex-basis: 35%;
+        width: 40%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        animation: show 1s linear;
+        &__heading{
+            flex-basis: 15%;
+            height: 15%;
+            color: white;
+            font-size: 2rem;
+            text-shadow: 0.009rem 0.009rem 0.0224rem white;
+            font-weight: bold;
+            font-family: 'Ubuntu', sans-serif;
+            opacity: 0.5;
+            padding-top: 5rem;
+        }
+        &__topping{
+            flex-basis: 15%;
+            height: 15%;
+            color: #C0C09A;
+            font-size: 1.5rem;
+            text-shadow: 0.009rem 0.009rem 0.0224rem #C0C09A;
+            font-weight: bold;
+            font-family: monospace;
+            opacity: .5;
+            padding-bottom: 1.5rem;
+        }
+        &__button{
+            width: 35%;
+            flex-basis: 17.5%;
+            border: none;
+            border-radius: .125rem;
+            background-color: #161927;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.5rem;
+            color: white;
+            text-shadow: 0.009rem 0.009rem 0.0224rem white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            transition: all .2s linear;
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
+}

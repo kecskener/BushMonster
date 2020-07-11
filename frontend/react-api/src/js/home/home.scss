@@ -1,0 +1,133 @@
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bree+Serif|Cabin|Fredoka+One|Montserrat|Roboto|Roboto+Condensed|Roboto+Slab|Ubuntu&display=swap);
+
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.home{
+    grid-row: 1 / span 20;
+    grid-column: 1 / span 20;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);  
+    background-image: url(../../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 101% 100%;
+    background-position: -1rem 0;
+    object-fit: cover;
+    &--header{
+        grid-row: 1 / 2;
+        grid-column: 1 / span 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: show 1s linear;
+        &__item{
+            text-transform: capitalize;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            color: white;
+            padding-left: 2.75rem;
+            padding-right: 2.75rem;
+            transition: all .2s linear;
+            text-shadow: 0.009rem 0.009rem 0.05rem white;
+            text-decoration: none;
+            &:hover{
+                color: #C0C09A;
+                font-size: 2rem;
+                cursor: pointer;
+                font-weight: 600;
+                text-shadow: 0.009rem 0.009rem 0.05rem #C0C09A;
+            }
+        }
+    }
+    &--login{
+        grid-row: 5 / span 5;
+        grid-column: 1 / span 5;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        animation: show 1s linear;
+        &__heading{
+            font-size: 3rem;
+            color: #634bce;
+            font-family: "Ubuntu", sans-serif;
+            text-shadow: 0.009rem 0.009rem 0.05rem #634bce;
+            grid-row: 1 / 2;
+            grid-column: 2 / span 7;
+        }
+        &__miding{
+            font-size: 2.5rem;
+            color: white;
+            font-family: "Ubuntu", sans-serif;
+            text-shadow: 0.009rem 0.009rem 0.05rem white;
+            grid-row: 2 / 3;
+            grid-column: 2 / span 10;
+            padding-top: 1rem;
+        }
+        &__ending{
+            font-size: 1.25rem;
+            color: white;
+            font-family: "Ubuntu", sans-serif;
+            text-shadow: 0.009rem 0.009rem 0.05rem white;
+            grid-row: 3 / 4;
+            grid-column: 2 / span 7;
+            opacity: 0.5;
+            padding-top: .75rem;
+            word-spacing: normal;
+            word-wrap: wrap;
+        }
+        &__button{
+            font-size: 1.25rem;
+            color: white;
+            font-family: "Ubuntu", sans-serif;
+            grid-row: 5 / 6;
+            grid-column: 2 / 5;
+            border: none;
+            font-weight: bold;
+            background-color: #271e52;
+            border-radius: 1.5rem;
+            transition: all .2s linear;
+            padding: .75rem;
+            text-shadow: 0.009rem 0.009rem 0.05rem white;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                cursor: pointer;
+                transform: scale(1.05);
+                text-shadow: 0.009rem 0.009rem 0.05rem white;
+            }
+        }
+    }
+    &--planet{
+        grid-row: 3 / span 6;
+        grid-column: 7 / span 10;
+        background-image: url(../../img/planet.png);
+        background-position: 1rem 3rem;
+        background-repeat: no-repeat;
+        background-size: 90%;
+    }
+    &--footer{
+        grid-row: 10 / span 10;
+        grid-column: 1 / span 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: 0.009rem 0.009rem 0.025rem white;
+        font-size: 0.75rem;
+        color: white;
+        font-family: "Ubuntu", sans-serif;
+        padding-top: 2rem;
+        opacity: 0.5;
+        padding-right: .75rem;
+    }
+}

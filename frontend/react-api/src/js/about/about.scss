@@ -1,0 +1,150 @@
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bree+Serif|Cabin|Fredoka+One|Montserrat|Roboto|Roboto+Condensed|Roboto+Slab|Ubuntu&display=swap);
+
+@keyframes levitate{
+    25%{
+        transform: translateY(1rem) rotate(0.1deg);
+    }
+    50%{
+        transform: translateY(-1rem) rotate(0.1deg);
+    }
+    75%{
+        transform: translateY(1.5rem) rotate(0.1deg);
+    }
+    100%{
+        transform: translateY(0rem);
+    }
+}
+
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.about{
+    grid-row: 1 / span 20;
+    grid-column: 1 / span 20;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);  
+    background-color: #271E52;
+    overflow: hidden;
+    &--header{
+        grid-row: 1 / 2;
+        grid-column: 1 / span 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: show 1s linear;
+        z-index: 1000;
+        &__item{
+            text-transform: capitalize;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.5rem;
+            font-weight: bolder;
+            color: white;
+            padding-left: 2.75rem;
+            padding-right: 2.75rem;
+            transition: all .2s linear;
+            text-shadow: 0.009rem 0.009rem 0.05rem white;
+            text-decoration: none;
+            outline: none;
+            &:hover{
+                color: #C0C09A;
+                font-size: 2rem;
+                cursor: pointer;
+                font-weight: 600;
+                text-shadow: 0.009rem 0.009rem 0.05rem #C0C09A;
+            }
+        }
+    }
+    &--planet{
+        grid-row: 2 / span 10;
+        grid-column: 1 / span 10;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        animation: show 1s linear;
+        &__textbox{
+            grid-row: 3 /span 7;
+            grid-column: 7 / span 9;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            &--heading{
+                font-size: 3rem;
+                color: white;
+                font-family: "Ubuntu", sans-serif;
+                text-shadow: 0.009rem 0.009rem 0.05rem white;
+                padding: 1rem 0rem;
+            }
+            &--description{
+                font-size: 1.25rem;
+                color: white;
+                font-family: "Ubuntu", sans-serif;
+                text-shadow: 0.009rem 0.009rem 0.05rem white;
+                opacity: 0.5;
+                padding-top: .75rem;
+                word-spacing: .25rem;
+                letter-spacing: .05rem;
+                padding-right: 2.5rem;
+                text-align: justify;
+                text-justify: inter-character;
+                padding-bottom: 2rem;
+                font-weight: normal;
+                line-height: 1.7rem;
+                &__except{
+                    text-decoration: none;
+                    opacity: 1;
+                    color: #C0C09A;
+                    text-shadow: 0.009rem 0.009rem 0.05rem #C0C09A;
+                    padding-left: .75rem;
+                }
+            }
+        }
+        &__orbit{
+            grid-row: 3 /span 10;
+            grid-column: 1 / 7;
+            background-image: url(../../img/planet.png);
+            background-repeat: no-repeat;
+            background-size: 51%;
+            object-fit: cover;
+            background-position: 1.5rem 1.75rem;
+        }
+
+        &__nebula{
+            grid-row: 3 / 5;
+            grid-column: 4 / 4;
+            background-image: url(../../img/planet_nebula.png);
+            background-position: center;
+            background-size: 55%;
+            background-repeat: no-repeat;
+        }
+
+        &__green{
+            grid-row: 1 / 5;
+            grid-column:  1 / 2;
+            background-image: url(../../img/planet_green.png);
+            background-position: center;
+            background-size: 55%;
+            background-repeat: no-repeat;
+        }
+
+       
+        &__astro{
+            grid-row: 3 / 10;
+            grid-column: 3 / 5;
+            background-image: url(../../img/astronaut.png);
+            background-position: center;
+            background-size: 35%;
+            background-repeat: no-repeat;
+            transition: all .2s linear;
+            animation: levitate 12.5s linear infinite;
+        }
+    }
+}

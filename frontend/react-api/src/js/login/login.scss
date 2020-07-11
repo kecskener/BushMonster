@@ -1,0 +1,108 @@
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bree+Serif|Cabin|Fredoka+One|Montserrat|Roboto|Roboto+Condensed|Roboto+Slab|Ubuntu&display=swap);
+
+::placeholder{
+    color: white;
+    opacity: 1;
+}
+
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.login{
+    grid-row: 1 / span 20;
+    grid-column: 1 / span 20;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #271e52;
+    &--panel{
+        height: 75%;
+        flex-basis: 75%;
+        display: flex;
+        align-items: center;
+        border-radius: .5rem;
+        background-color: rgb(207, 205, 205);
+        animation: show 1s linear;
+        &__image{
+            flex-basis: 65%;
+            height: 100%;
+            background-image: url(../../img/panel__image.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: 0 .015rem;
+            object-fit: cover;
+            border-top-left-radius: .4125rem;
+            border-bottom-left-radius: .4125rem;
+        }
+        &__form{
+            flex-basis: 45%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: wrap;
+            flex-grow: 0;
+            background-color: #313958;
+            border-top-right-radius: .4125rem;
+            border-bottom-right-radius: .4125rem;
+            &--input{
+                border: none;
+                border-radius: .25rem;
+                background-color: #1F2437;
+                flex-basis: 7.5%;
+                padding-left: .75rem;
+                width: 65%;
+                font-size: 1.15rem;
+                color: white;
+                font-family: 'Ubuntu' sans-serif;
+            }
+            &--input2{
+                border: none;
+                border-radius: .25rem;
+                background-color: #1F2437;
+                padding-left: .75rem;
+                flex-basis: 7.5%;
+                width: 65%;
+                font-size: 1.15rem;
+                color: white;
+                font-family: 'Ubuntu' sans-serif;    
+            }
+            &--submit{
+                border: none;
+                border-radius: .25rem;
+                font-family: 'Ubuntu' sans-serif;
+                background-color: #161927;
+                color: white;
+                flex-basis: 7.5%;
+                width: 65%;
+                transition: all .2s linear;
+                font-size: 1.25rem;
+                text-shadow: 0.009rem 0.009rem 0.025rem white;
+                &:hover{
+                    cursor: pointer;
+                    scale: 1.05;
+                    text-shadow: 0.009rem 0.009rem 0.025rem white;
+                }
+            }
+            &--error{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-transform: initial;
+                font-family: 'Ubuntu', sans-serif;
+                font-size: 1rem;
+                font-weight: bolder;
+                color: rgb(98, 55, 56);
+                transition: all .2s linear;
+            }
+        }
+    }
+}

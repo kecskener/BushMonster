@@ -1,0 +1,162 @@
+@import url(https://fonts.googleapis.com/css?family=Alfa+Slab+One|Bree+Serif|Cabin|Fredoka+One|Montserrat|Roboto|Roboto+Condensed|Roboto+Slab|Ubuntu&display=swap);
+
+@keyframes lit{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1.015);
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.main{
+    grid-row: 1 / span 20;
+    grid-column: 1 / span 20;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    background-color: #271E52;
+    &--header{
+        grid-row: 1 / 2;
+        grid-column: 1 / span 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row-reverse;
+        background-color: #313958; 
+        transition: all .2s linear;
+        &__counter{
+            flex-basis: 25%;
+            height: 15%;
+            border: none;
+            background-color: transparent;
+            color: #C0C09A;
+            font-size: 1.25rem;
+            text-shadow: 0.009rem 0.009rem 0.05rem #C0C09A;
+            font-weight: bold;
+            font-family: 'Ubuntu', sans-serif;
+            transition: all .2s linear;
+            text-align: right;
+            opacity: .5;
+        }
+        &__span{
+            flex-basis: 15%;
+            height: 15%;
+            color: white;
+            font-size: 1.25rem;
+            text-shadow: 0.009rem 0.009rem 0.0224rem white;
+            font-weight: bold;
+            font-family: 'Ubuntu', sans-serif;
+            transition: all .2s linear;
+            opacity: 0.5;
+            &:hover{
+                color: #C0C09A;
+                cursor: pointer;
+                text-shadow: 0.009rem 0.009rem 0.05rem #C0C09A;
+            }
+        }
+        &__link{
+            flex-basis: 9%;
+            height: 15%;
+            color: white;
+            font-size: 1.25rem;
+            text-shadow: 0.009rem 0.009rem 0.0224rem white;
+            font-weight: bold;
+            font-family: 'Ubuntu', sans-serif;
+            transition: all .2s linear;
+            opacity: 0.5;
+            text-decoration: none;
+            &:hover{
+                color: #C0C09A;
+                cursor: pointer;
+                text-shadow: 0.009rem 0.009rem 0.05rem #C0C09A;
+            }
+        }
+        &__out{
+                flex-basis: 5%;
+                height: 15%;
+                color: white;
+                font-size: 1.25rem;
+                text-shadow: 0.009rem 0.009rem 0.0224rem white;
+                font-weight: bold;
+                font-family: 'Ubuntu', sans-serif;
+                transition: all .2s linear;
+                opacity: 0.5;
+                text-decoration: none;
+                &:hover{
+                    color: #C0C09A;
+                    cursor: pointer;
+                    text-shadow: 0.009rem 0.009rem 0.05rem #C0C09A;
+                }
+            }
+    }   
+    &--list{
+        grid-row: 2 / span 10;
+        grid-column: 1 / span 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        overflow-y: scroll;
+        flex-wrap: column wrap;
+        padding-top: 1rem;
+        &__item{
+            height: 12.5%;
+            width: 95%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: #333B59;
+            transition: all .2s linear;
+            animation: lit 1s linear;
+            min-height: min-content;
+            flex-shrink: 0;
+            position: relative;
+            margin-top: 2rem;
+            &:last-child{
+                margin-bottom: 1rem;
+            }
+            &:hover{
+                transform: scale(1.025);
+                cursor: pointer;
+            }
+            &__container{
+                flex-basis: 100%;
+                height: 100%;
+                pointer-events: none;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                &--text{
+                    flex-basis: 15%;
+                    height: 15%;
+                    border: none;
+                    background-color: transparent;
+                    color: white;
+                    font-size: 1.25rem;
+                    text-shadow: 0.009rem 0.009rem 0.0224rem white;
+                    font-weight: bold;
+                    font-family: 'Ubuntu', sans-serif;
+                    transition: all .2s linear;
+                    opacity: 0.5
+                }
+                &--description{
+                    flex-basis: 22.5%;
+                    height: 15%;
+                    border: none;
+                    background-color: transparent;
+                    color: white;
+                    font-size: 1.25rem;
+                    text-shadow: 0.009rem 0.009rem 0.0224rem white;
+                    font-weight: bold;
+                    font-family: 'Ubuntu', sans-serif;
+                    transition: all .2s linear;
+                    opacity: 0.5
+                }
+            }
+        }
+    }  
+}
